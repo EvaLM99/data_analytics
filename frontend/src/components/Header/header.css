@@ -1,0 +1,93 @@
+#header {
+    border: 1px solid var(--primaryColor);
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px var(--primaryColor);
+    border-top: none;
+    border-left: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+nav {
+    background-color: rgb(236, 235, 235);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+nav > * {
+    display: flex;
+    align-items: center;
+}
+
+
+
+nav a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--primaryColor);
+    margin-right: 40px;
+
+}
+
+nav button {
+    border: none;
+    color: var(--primaryColor);
+    font-size: 16px;
+    margin-right: 40px;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1;
+    padding: 0;
+    background-color: inherit;   
+}
+
+nav a:hover, nav button:hover {
+    color: var(--secondaryColor);
+}
+
+
+
+
+/* Menu déroulant */
+li {
+    position: relative; /* nécessaire pour que le sous-menu soit absolu par rapport au li parent */
+    display: inline-block;
+}
+
+li ul {
+    display: none; /* caché par défaut */
+    position: absolute;
+    top: 100%; /* juste en dessous du parent */
+    left: 0;
+    background-color: rgb(236, 235, 235);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 150px; /* largeur minimale du sous-menu */
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+li:hover ul {
+    display: block; /* affichage au survol */
+}
+
+li ul li {
+    display: block; /* pour que chaque élément soit sur sa ligne */
+}
+
+li ul li a, li ul li button {
+    display: block;
+    width: 100%;
+    padding: 8px 0px;
+    color: var(--primaryColor);
+    text-align: left;
+}
+
+li ul li a:hover, li ul li button:hover {
+    color: var(--secondaryColor);
+    background-color: rgba(0,0,0,0.05); /* léger effet hover */
+}

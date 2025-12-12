@@ -1,0 +1,82 @@
+#logo-sheet td{
+    border: 2px solid var( --primaryColor);
+    margin: 0;
+    height: 2px;
+    width: 5px;
+}
+
+#logo-sheet {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+
+
+#project-name {
+    border: none;
+    display: block; 
+    background-color: inherit;
+    cursor: pointer;
+    width: 100%; 
+    max-width: 100%;
+    font-size: 18px;
+    white-space: nowrap;      
+    overflow: hidden;     
+    text-overflow: ellipsis; 
+    text-align: left;
+}
+
+
+#projects {
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+#projects > tr > td {
+    border-bottom: 1px solid black;
+}
+
+#projects > tr > td:first-child {
+    width: 50px;
+}
+
+
+#projects > tr > td:nth-child(2) {
+    width: 400px;
+    max-width: 400px;
+    text-align: left;
+    
+}
+
+
+#projects > tr > td:last-child {
+    padding-bottom: 0.3rem;
+}
+
+#create-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#create-project-button {
+    background: var(--primaryColor);
+    height: 34px;
+}
+
+
+#delete-project-button {
+    color:white;
+    background-color: red;
+    height: 28px;
+    border-color: red;
+}
+
+
+#back-project-button {
+    border-color: var(--primaryColor);
+    color: var(--primaryColor);
+    display: flex;
+    justify-content: left;
+}

@@ -1,0 +1,155 @@
+/* -----------------------------
+   Input & labels
+------------------------------ */
+.custom-file-label { 
+    background-color: var(--primaryColor);
+    color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+/* -----------------------------
+   Profile photo & cropper
+------------------------------ */
+.profile-photo-container {
+    width: 400px;
+    height: 400px;
+    position: relative; /* pour les boutons cropper absolus */
+    margin: 0 auto;
+}
+
+.profile-photo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cropper-buttons-container {
+    position: absolute;
+    bottom: 0px; /* juste au-dessus du bas de la photo */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.cropper-buttons {
+    color: var(--secondaryColor) !important;
+    border-color: var(--secondaryColor) !important;
+    background-color: rgba(255, 255, 255, 0.7)!important; /* blanc semi-transparent */
+    padding: 0px 14.5px !important;
+}
+
+
+/* -----------------------------
+   Layout: form & sections
+------------------------------ */
+.profile-container form {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.update-profile-photo-infos {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* -----------------------------
+   User information section
+------------------------------ */
+.informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.change-info, .change-password {
+    width: 300px !important;
+}
+
+.update-profile-button, .update-password-button {
+    margin-top: 20px !important;
+    background-color: var(--primaryColor) !important;
+}
+
+/* -----------------------------
+   Profile placeholder (no photo)
+------------------------------ */
+.profile-placeholder-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(213, 213, 213);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.profile-placeholder-head {
+    width: 100%; 
+    height: 100%;
+    background-color: #eeb6da;
+    border-radius: 50%;
+}
+
+.profile-placeholder-eye {
+    width: 20%; 
+    height: 10%;
+    position: absolute;
+    top: 100px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.left-eye {
+    left: 80px;
+}
+
+.right-eye {
+    right: 80px;
+}
+
+.profile-placeholder-pupil {
+    width: 50%; 
+    height: 100%;
+    position: absolute;
+    left: 25%;
+    background-color: rgb(95, 32, 32);
+    border-radius: 50%;
+}
+
+.profile-placeholder-nose {
+    height: 0;
+    width: 0;
+    border-right: 30px solid transparent;
+    border-bottom: 40px solid red;
+    border-left: 30px solid transparent;
+    position: absolute;
+    top: 180px;
+    left: 175px;
+}
+
+.profile-placeholder-mouth {
+    width: 200px;
+    height: 20px;
+    border-bottom: 5px solid red;
+    border-radius: 0 0 30px 30px;
+    position: absolute;
+    top: 280px;
+    left: 100px;
+}
+
+
+.update-profil-password {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}

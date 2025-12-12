@@ -1,0 +1,15 @@
+# Environnements et secrets
+.env
+.env.local
+.env.development
+.env.production
+
+# Media uploads
+media/profile_photos/*
+!media/profile_photos/.gitkeep
+
+# Dépendances
+__pycache__/
+*.pyc
+db.sqlite3
+*.log

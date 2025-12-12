@@ -1,0 +1,124 @@
+#container {
+    margin-top: 10px;
+    border: 1px solid var(--primaryColor);
+    display: grid;
+    overflow: scroll;
+    height: 500px;
+}
+
+
+.column-label {
+  background-color: lightgray;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  border: 1px solid grey;
+  position: sticky;
+  top: 0;        /* reste collé en haut */
+  z-index: 10;   /* au-dessus des cellules */
+}
+
+/* Labels de lignes (1, 2, 3...) */
+.row-label {
+  background-color: lightgray;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  border: 1px solid grey;
+  position: sticky;
+  left: 0;       /* reste collé à gauche */
+  z-index: 5;
+}
+
+/* Coin en haut à gauche (vide) */
+.corner-label {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border: 1px solid grey;
+  z-index: 15; /* au-dessus de tout */
+}
+
+.buttons {
+    display: flex;
+    position: static;
+    margin-top: 15px;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+#save-project-button-sheet {
+  color: green;
+  border-color: green;
+}
+
+
+
+#delete-project-button-sheet {
+    color:white;
+    background-color: red;
+    border-color: red;
+}
+
+.cell:focus {
+  outline: none; /* on gère la bordure nous-mêmes */
+  border-color: var(--primaryColor);
+}
+
+/* quand la cellule est sélectionnée via selectedCell (ex. édition depuis la barre de formule) */
+.cell.selected {
+  border-color: var(--primaryColor);
+}
+
+#formula {
+    word-break: normal;
+    overflow-y: scroll;
+}
+
+.formula-container, #formula {
+  width: 1000px;
+}
+
+.multi-selected {
+  background-color: rgb(237, 200, 161);
+}
+
+.formula-container, #modify-project-name {
+  margin: 15px auto;
+}
+
+.context-menu {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  text-align: left;
+  padding: 5px;
+  background: white;
+  border: 1px solid gray;
+}
+
+          
+.sheet-container{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#modify-project-name {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid transparent; /* bordure invisible par défaut */
+  border-radius: 4px;             /* optionnel pour arrondir */
+  padding: 4px 8px;
+  outline: none;                  /* supprime le contour bleu par défaut */
+  transition: border-color 0.2s ease; /* pour un effet smooth */
+}
+
+#modify-project-name:focus, #modify-project-name:hover {
+  border-color: var(--secondaryColor);
+}
+
+
